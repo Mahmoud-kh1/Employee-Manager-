@@ -3,7 +3,56 @@ from tkinter import ttk
 
 root = Tk()
 root.title('Employee Managment System')
-root.geometry('1310x515+100+100')
+root.geometry('1310x515+0+0')
 root.resizable(False, False)
 root.configure(bg = '#2c3e50')
-root.mainloop()
+
+#======= Entity Frame ======#
+entry_frame = Frame(root, bg ='#2c3e50')
+entry_frame.place(x = 1, y = 1, width= 360, height=510)
+title = Label(entry_frame, text = 'Employee Company', font = ('Calibri', 18, 'bold'), bg = '#2c3e50', fg= 'white')
+title.place(x = 10, y = 1)
+
+
+LblName = Label(entry_frame, text = "Name", font = ('Calibri', 16, 'bold'), bg = '#2c3e50', fg= 'white' )
+LblName.place(x = 10, y = 50)
+txtName = Entry(entry_frame, width= 20, font = ('Calibri', 16, 'bold'))
+txtName.place(x = 120, y = 50)
+
+
+LblJob = Label(entry_frame, text = "Job", font = ('Calibri', 16, 'bold'), bg = '#2c3e50', fg= 'white' )
+LblJob.place(x = 10, y = 90)
+txtJob = Entry(entry_frame, width= 20, font = ('Calibri', 16, 'bold'))
+txtJob.place(x = 120, y = 90) 
+
+LblGender = Label(entry_frame, text = "Gender", font = ('Calibri', 16, 'bold'), bg = '#2c3e50', fg= 'white' )
+LblGender.place(x = 10, y = 130)
+comboGender = ttk.Combobox(entry_frame,state= 'readonly', width= 18,font = ('Calibri', 16, 'bold')  )
+comboGender['values'] = ("Male", "Female")
+comboGender.place(x = 120, y =130)
+
+
+LblAge = Label(entry_frame, text = "Age", font = ('Calibri', 16, 'bold'), bg = '#2c3e50', fg= 'white' )
+LblAge.place(x = 10, y = 170)
+txtAge= Entry(entry_frame, width= 20, font = ('Calibri', 16, 'bold'))
+txtAge.place(x = 120, y = 170) 
+
+
+LblEmail = Label(entry_frame, text = "Email", font = ('Calibri', 16, 'bold'), bg = '#2c3e50', fg= 'white' )
+LblEmail.place(x = 10, y = 210)
+txtEmail= Entry(entry_frame, width= 20, font = ('Calibri', 16, 'bold'))
+txtEmail.place(x = 120, y = 210) 
+
+
+LblMob = Label(entry_frame, text = "Moblie", font = ('Calibri', 16, 'bold'), bg = '#2c3e50', fg= 'white' )
+LblMob.place(x = 10, y = 250)
+txtMob= Entry(entry_frame, width= 20, font = ('Calibri', 16, 'bold'))
+txtMob.place(x = 120, y = 250) 
+
+
+LblAdderss = Label(entry_frame, text = "Address :", font = ('Calibri', 16, 'bold'), bg = '#2c3e50', fg= 'white' )
+LblAdderss.place(x = 10, y = 290)
+txtAddress = Text(entry_frame, width= 30, height= 2 ,font = ('Calibri', 16, 'bold') )
+txtAddress.place(x = 10, y = 330)
+root.mainloop() 
+
