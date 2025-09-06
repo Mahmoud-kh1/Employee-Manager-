@@ -54,5 +54,48 @@ LblAdderss = Label(entry_frame, text = "Address :", font = ('Calibri', 16, 'bold
 LblAdderss.place(x = 10, y = 290)
 txtAddress = Text(entry_frame, width= 30, height= 2 ,font = ('Calibri', 16, 'bold') )
 txtAddress.place(x = 10, y = 330)
-root.mainloop() 
+
+#===== Buttons ===== #
+btnFrame = Frame(entry_frame, bg = '#2c3e50', bd = 1, relief= SOLID)
+btnFrame.place(x = 10, y = 400, width= 335, height= 100)
+
+btnAdd = Button(btnFrame,
+                text = "Add Details",
+                width = 14,
+                height= 1,
+                font = ('Calibri'),
+                fg = 'white',
+                bg = '#16a085', bd = 0
+                ).place(x = 4, y = 5)
+
+btnEdit = Button(btnFrame,
+                text = "Update Details",
+                width = 14,
+                height= 1,
+                font = ('Calibri'),
+                fg = 'white',
+                bg = '#2980b9', bd = 0
+                ).place(x = 4, y = 50)
+
+
+btnEdit = Button(btnFrame,
+                text = "Delete Details",
+                width = 14,
+                height= 1,
+                font = ('Calibri'),
+                fg = 'white',
+                bg = '#c0392b', bd = 0
+                ).place(x = 170, y = 5)
+
+
+btnClear = Button(btnFrame,
+                text = "Clear Details",
+                width = 14,
+                height= 1,
+                font = ('Calibri'),
+                fg = 'white',
+                bg = '#f39c12', bd = 0
+                ).place(x = 170, y = 50) 
+
+root.mainloop()  
 
