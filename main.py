@@ -95,7 +95,50 @@ btnClear = Button(btnFrame,
                 font = ('Calibri'),
                 fg = 'white',
                 bg = '#f39c12', bd = 0
-                ).place(x = 170, y = 50) 
+                ).place(x = 170, y = 50)  
+
+
+
+#========== Table Frame ============# 
+treeFrame = Frame(root , bg = 'white')
+treeFrame.place(x = 365, y = 1, width= 940, height=510)
+style = ttk.Style()
+style.configure("mystyle.Treeview", font=('Calibri', 13),rowheight = 50)
+style.configure("mystyleTreeview", font = ('Calibri', 13))
+
+tv = ttk.Treeview(treeFrame, columns=(1, 2, 3, 4, 5, 6, 7, 8), style="mystyle.Treeview")
+tv.heading("1", text= "ID")
+tv.column("1", width="40") 
+
+tv.heading("2", text= "Name")
+tv.column("2", width="140") 
+
+tv.heading("3", text= "Age")
+tv.column("3", width="50") 
+
+
+tv.heading("4", text= "Job")
+tv.column("4", width="120") 
+
+
+tv.heading("5", text= "Email")
+tv.column("5", width="150") 
+
+tv.heading("6", text= "Gender")
+tv.column("6", width="90")
+
+
+tv.heading("7", text= "Mobile")
+tv.column("7", width="150") 
+
+
+tv.heading("8", text= "Address")
+tv.column("8", width="190") 
+
+tv['show'] = 'headings'
+
+tv.pack()
+
 
 root.mainloop()  
 
