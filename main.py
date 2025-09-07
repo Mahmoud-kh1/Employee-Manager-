@@ -3,9 +3,17 @@ from tkinter import ttk
 
 root = Tk()
 root.title('Employee Managment System')
-root.geometry('1310x515+0+0')
+root.geometry('1250x615+0+0')
 root.resizable(False, False)
 root.configure(bg = '#2c3e50')
+
+logo = PhotoImage(file='lgo.png')
+
+lblLogo = Label(root, image = logo)
+lblLogo.place(x = 80, y = 520)
+
+
+
 
 #======= Entity Frame ======#
 entry_frame = Frame(root, bg ='#2c3e50')
@@ -55,6 +63,22 @@ LblAdderss.place(x = 10, y = 290)
 txtAddress = Text(entry_frame, width= 30, height= 2 ,font = ('Calibri', 16, 'bold') )
 txtAddress.place(x = 10, y = 330)
 
+
+#===========[Define] ======= 
+def hide():
+    root.geometry("375x525")
+
+def show(): 
+   root.geometry('1250x615+0+0')
+
+
+btnHide = Button(entry_frame, text = 'HIDE',bg ='white', bd = 1, relief= SOLID,cursor='hand2', command= hide)
+btnHide.place(x = 270, y = 10)
+
+
+btnShow = Button(entry_frame, text = 'SHOW',bg ='white', bd = 1, relief= SOLID, cursor='hand2', command= show)
+btnShow.place(x = 310, y = 10)
+
 #===== Buttons ===== #
 btnFrame = Frame(entry_frame, bg = '#2c3e50', bd = 1, relief= SOLID)
 btnFrame.place(x = 10, y = 400, width= 335, height= 100)
@@ -101,7 +125,7 @@ btnClear = Button(btnFrame,
 
 #========== Table Frame ============# 
 treeFrame = Frame(root , bg = 'white')
-treeFrame.place(x = 365, y = 1, width= 940, height=510)
+treeFrame.place(x = 365, y = 1, width= 875, height=610)
 style = ttk.Style()
 style.configure("mystyle.Treeview", font=('Calibri', 13),rowheight = 50)
 style.configure("mystyleTreeview", font = ('Calibri', 13))
@@ -133,11 +157,11 @@ tv.column("7", width="150")
 
 
 tv.heading("8", text= "Address")
-tv.column("8", width="190") 
+tv.column("8", width="150") 
 
 tv['show'] = 'headings'
 
-tv.pack()
+tv.place(x = 1, y = 1, height= 610, width=875)
 
 
 root.mainloop()  
